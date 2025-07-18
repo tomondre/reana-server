@@ -120,11 +120,15 @@ check_yamllint() {
 }
 
 check_pytest() {
+    prepare_db
+    pytest
+    stop_db_container
+}
+
+prepare_db() {
     clean_old_db_container
     start_db_container
     trap clean_old_db_container SIGINT SIGTERM SIGSEGV ERR
-    pytest
-    stop_db_container
 }
 
 check_dockerfile() {
@@ -190,5 +194,7 @@ case $arg in
 --check-shfmt) check_shfmt ;;
 --check-markdownlint) check_markdownlint ;;
 --check-prettier) check_prettier ;;
+--prepare-db) prepare_db ;;
+--stop-db) stop_db_container ;;
 *) echo "[ERROR] Invalid argument '$arg'. Exiting." && exit 1 ;;
 esac

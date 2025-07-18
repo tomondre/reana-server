@@ -15,6 +15,7 @@ import traceback
 from flask import jsonify, request
 from flask_login import current_user
 from reana_commons.errors import REANAQuotaExceededError
+# import wdb
 
 from reana_server.utils import (
     _get_user_from_invenio_user,
@@ -29,6 +30,8 @@ def signin_required(include_gitlab_login=False, token_required=True):
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
+            # wdb.set_trace()
+
             try:
                 user = None
                 if current_user.is_authenticated:
