@@ -56,6 +56,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of user.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -187,6 +194,13 @@
             "description": "The API access_token of the current user.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the current user.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -447,7 +461,14 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
-            "required": true,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
             "type": "string"
           }
         ],
@@ -1081,6 +1102,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of secrets owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -1166,6 +1194,13 @@
             "description": "API key of the admin.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the admin.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -1265,6 +1300,13 @@
             "description": "Secrets owner access token.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of secrets owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -1546,6 +1588,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of the current user.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -1640,6 +1689,13 @@
             "description": "API access_token of user.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the current user.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           }
@@ -1739,6 +1795,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of current user.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -1834,6 +1897,13 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -2233,6 +2303,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -2367,6 +2444,13 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           }
@@ -2524,6 +2608,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -2643,6 +2734,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -2742,6 +2840,13 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -2916,6 +3021,13 @@
             "type": "string"
           },
           {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
+          },
+          {
             "description": "Required. Analysis UUID or name.",
             "in": "path",
             "name": "workflow_id_or_name",
@@ -3078,6 +3190,13 @@
             "type": "string"
           },
           {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
+          },
+          {
             "description": "Type of interactive session to use.",
             "in": "path",
             "name": "interactive_session_type",
@@ -3206,6 +3325,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -3323,6 +3449,13 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -3453,6 +3586,13 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -3598,6 +3738,13 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -3771,6 +3918,13 @@
             "type": "string"
           },
           {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
+          },
+          {
             "description": "Required. Workflow UUID or name.",
             "in": "path",
             "name": "workflow_id_or_name",
@@ -3900,6 +4054,13 @@
             "description": "API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -4110,6 +4271,13 @@
             "type": "string"
           },
           {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
+          },
+          {
             "description": "Optional. Additional input parameters and operational options.",
             "in": "body",
             "name": "parameters",
@@ -4289,6 +4457,13 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           }
@@ -4536,6 +4711,13 @@
             "type": "string"
           },
           {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
+          },
+          {
             "description": "Optional. Additional parameters to customise the workflow status change.",
             "in": "body",
             "name": "parameters",
@@ -4716,6 +4898,13 @@
             "type": "string"
           },
           {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
+          },
+          {
             "description": "Required. Workflow UUID or name.",
             "in": "path",
             "name": "workflow_id_or_name",
@@ -4858,6 +5047,13 @@
             "description": "The API access_token of workflow owner.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           },
@@ -5035,6 +5231,13 @@
             "type": "string"
           },
           {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
+          },
+          {
             "description": "Optional flag to return a previewable response of the file (corresponding mime-type).",
             "in": "query",
             "name": "preview",
@@ -5150,6 +5353,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -5261,6 +5471,13 @@
             "name": "access_token",
             "required": false,
             "type": "string"
+          },
+          {
+            "description": "The JWT of the workflow owner.",
+            "in": "header",
+            "name": "Authorization",
+            "required": false,
+            "type": "string"
           }
         ],
         "produces": [
@@ -5349,6 +5566,13 @@
             "description": "API access_token of user.",
             "in": "query",
             "name": "access_token",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "The JWT of the current user.",
+            "in": "header",
+            "name": "Authorization",
             "required": false,
             "type": "string"
           }
