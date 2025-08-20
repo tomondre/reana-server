@@ -81,6 +81,7 @@ from reana_server.gitlab_client import (
     GitLabClient,
     GitLabClientException,
 )
+from reana_server.oauth import create_or_update_user_from_idp
 from reana_server.validation import validate_retention_rule, validate_workflow
 
 
@@ -721,8 +722,13 @@ def _get_user_from_jwt(header: str) -> User:
         iss = claims.get("iss")
         if not sub or not iss:
             raise ValueError("Token missing subject claim or iss")
+        try:
+            user = _get_user_by_sub_and_iss(sub, iss)
+            return user
+        except ValueError:
+            # User not found, create/update from IdP
+            return create_or_update_user_from_idp(token, sub, iss)
 
-        return _get_user_by_sub_and_iss(sub, iss)
     except JoseError as e:
         raise ValueError(f"Invalid token: {str(e)}")
     except Exception as e:
